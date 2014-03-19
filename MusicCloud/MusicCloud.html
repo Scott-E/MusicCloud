@@ -1,0 +1,75 @@
+<html>
+	<style>
+	#frame {
+		border: 1px solid #A7A7A4;
+        width: 320px;
+		height: 480px;
+		text-align: center;
+	}
+	#bottomAlign {
+		position: absolute;
+		bottom: 0;
+	}
+	#topAlign {
+		position: absolute;
+		top: 0;
+	}
+	.vertAlign {
+		position: relative;
+	}
+	.inLine {
+		display: inline;
+	}
+	</style>
+
+	<head>
+		<title>MusicCloud</title>
+	</head>
+	
+	<script>
+		function skip()
+		{
+			var track = "Track Changed";
+			var artist = "Changed Artist";
+			var genre = "New Genre";
+			var plays = "1000", likes = "25", reposts = "3", comments = "30";
+			
+			document.getElementById("trackTitle").innerHTML=track;
+			document.getElementById("artistName").innerHTML=artist;
+			document.getElementById("genre").innerHTML=genre;
+			
+			document.getElementById("plays").innerHTML=plays;
+			document.getElementById("likes").innerHTML=likes;
+			document.getElementById("comments").innerHTML=reposts;
+			document.getElementById("reposts").innerHTML=comments;
+			
+		}
+	</script>
+
+	<body>
+		<fieldset id="frame" class="vertAlign">
+			<div id="topAlign">
+				<div id="trackTitle">Track Title</div>
+				<div id="artistName">Artist Name</div>
+				<div id="genre">Genre</div>
+				
+				<input type="image" src="../Images/Button.jpg" height="40"/>
+				<img name="track_image" src="../Images/Track.jpg" alt="Track Name" height="40">
+				<br>
+				
+				<img name="plays_image" src="../Images/Plays.jpg" alt="Plays">
+				<div id="plays" class="inLine">2000</div>
+				<img name="likes_image" src="../Images/Likes.jpg" alt="Likes">
+				<div id="likes" class="inLine">50</div>
+				<img name="reposts_image" src="../Images/Reposts.jpg" alt="Reposts">
+				<div id="reposts" class="inLine">5</div>
+				<img name="comments_image" src="../Images/Comments.jpg" alt="Comments">
+				<div id="comments" class="inLine">60</div>
+			</div>
+			
+			<div id="bottomAlign">
+				<button type="button" onclick="skip()">Skip</button>
+			</div>
+		</fieldset>
+	</body>
+</html>
